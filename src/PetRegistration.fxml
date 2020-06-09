@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="394.0" prefWidth="477.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label layoutX="16.0" layoutY="26.0" text="이름" />
+      <Label layoutX="258.0" layoutY="26.0" text="견종" />
+      <Label layoutX="16.0" layoutY="69.0" text="나이" />
+      <Label layoutX="258.0" layoutY="69.0" text="몸무게" />
+      <Label layoutX="16.0" layoutY="115.0" text="출생일" />
+      <Label layoutX="16.0" layoutY="161.0" text="애견성별" />
+      <Label layoutX="258.0" layoutY="161.0" text="중성화여부" />
+      <Label layoutX="16.0" layoutY="267.0" text="보호자이름" />
+      <Label layoutX="258.0" layoutY="267.0" text="전화번호" />
+      <Separator layoutX="61.0" layoutY="222.0" prefHeight="3.0" prefWidth="355.0" />
+      <TextField layoutX="82.0" layoutY="22.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="138.0" />
+      <TextField layoutX="304.0" layoutY="65.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="138.0" />
+      <TextField layoutX="82.0" layoutY="65.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="138.0" />
+      <TextField layoutX="304.0" layoutY="22.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="138.0" />
+      <ComboBox layoutX="160.0" layoutY="157.0" prefWidth="60.0" />
+      <ComboBox layoutX="382.0" layoutY="157.0" prefWidth="60.0" />
+      <TextField layoutX="313.0" layoutY="263.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="138.0" />
+      <TextField layoutX="82.0" layoutY="263.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="138.0" />
+      <Separator layoutX="236.0" layoutY="15.0" orientation="VERTICAL" prefHeight="200.0" />
+      <DatePicker layoutX="82.0" layoutY="111.0" prefHeight="23.0" prefWidth="138.0" />
+      <Button layoutX="140.0" layoutY="329.0" mnemonicParsing="false" text="등록" />
+      <Button layoutX="304.0" layoutY="329.0" mnemonicParsing="false" text="닫기" />
+   </children>
+</AnchorPane>
