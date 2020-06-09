@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 
 <VBox prefHeight="283.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-fx:id="Contro">
+fx:id="">
    <children>
       <HBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0" spacing="70.0">
          <children>
