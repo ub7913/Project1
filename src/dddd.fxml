@@ -40,27 +40,6 @@
                               <Insets top="10.0" />
                            </padding></Label>
                         <Separator prefHeight="26.0" prefWidth="530.0" />
-                        <HBox spacing="10.0">
-                           <children>
-                        		<Label text="환자번호  " />
-                        		<TextField fx:id="txtName" alignment="TOP_RIGHT" prefHeight="23.0" />
-                              <Label text="   이름   " />
-                              <TextField fx:id="txtName1" alignment="TOP_RIGHT" prefHeight="23.0" />
-                           </children>
-                        </HBox>
-                        <HBox spacing="10.0">
-                           <children>
-                              <Label text="견종 " />
-                        		<ComboBox fx:id="breed" prefHeight="23" prefWidth="85">
-                        			<items>
-                        				<FXCollections fx:factory="observableArrayList">
-                        					<String fx:value="공개" />
-                        					<String fx:value="비공개" />
-                        				</FXCollections>
-                        			</items>
-                        		</ComboBox>
-                           </children>
-                        </HBox>
                         <HBox prefHeight="44.0" prefWidth="231.0" spacing="10.0">
                            <children>
                               <Label text="성별  " />
@@ -81,6 +60,18 @@
                               <TextField fx:id="weight" alignment="TOP_RIGHT" prefHeight="23.0" prefWidth="173.0" />
                            </children>
                         </HBox>
+                        <Pane>
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                              		<Label text="환자번호  " />
+                              		<TextField fx:id="txtName" alignment="TOP_RIGHT" prefHeight="23.0" />
+                                    <Label text="   이름   " />
+                                    <TextField fx:id="txtName1" alignment="TOP_RIGHT" prefHeight="23.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
                         <Label alignment="CENTER" contentDisplay="CENTER" lineSpacing="30.0" prefHeight="15.0" prefWidth="533.0" text="------------차트-------------" textAlignment="JUSTIFY">
                            <VBox.margin>
                               <Insets />
@@ -92,6 +83,19 @@
                            <children>
                               <Label prefHeight="15.0" prefWidth="49.0" text="진료번호" />
                               <TextField fx:id="diagNo" alignment="TOP_RIGHT" prefHeight="23.0" prefWidth="95.0" />
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="견종 " />
+                              		<ComboBox fx:id="breed" prefHeight="23" prefWidth="85">
+                              			<items>
+                              				<FXCollections fx:factory="observableArrayList">
+                              					<String fx:value="공개" />
+                              					<String fx:value="비공개" />
+                              				</FXCollections>
+                              			</items>
+                              		</ComboBox>
+                                 </children>
+                              </HBox>
                            </children>
                         </HBox>
                         <HBox prefHeight="29.0" prefWidth="75.0" spacing="10.0">
