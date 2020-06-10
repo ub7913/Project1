@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -45,6 +46,7 @@ public class PetHospitalController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+<<<<<<< HEAD
 		btnTreatmentList.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent arg0) {
@@ -52,6 +54,13 @@ public class PetHospitalController implements Initializable {
 			}
 		});
 
+=======
+		Calendar cal = Calendar.getInstance()
+				cal.
+		
+		
+		
+>>>>>>> branch 'master' of https://github.com/ub7913/Project1.git
 	}
 
 	public void treatList() {
