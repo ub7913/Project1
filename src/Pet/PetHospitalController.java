@@ -10,21 +10,20 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-<<<<<<< HEAD
+
 import javafx.fxml.FXML;
-=======
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
->>>>>>> branch 'master' of https://github.com/ub7913/Project1.git
+
 import javafx.fxml.Initializable;
-<<<<<<< HEAD
+
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-=======
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -40,13 +39,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
->>>>>>> branch 'master' of https://github.com/ub7913/Project1.git
 
-<<<<<<< HEAD
-public class PetHospitalController implements Initializable{
-@FXML GridPane grid;
-@FXML TextField te;
-=======
 public class PetHospitalController implements Initializable {
 
 	@FXML
@@ -60,10 +53,8 @@ public class PetHospitalController implements Initializable {
 //	@FXML
 ////	CheckBox gender;
 
->>>>>>> branch 'master' of https://github.com/ub7913/Project1.git
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-<<<<<<< HEAD
 		
 		Date date= new Date();
 		date.setTime(9);
@@ -83,7 +74,6 @@ public class PetHospitalController implements Initializable {
 			}
 		}
 				
-=======
 
 		btnTreatmentList.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -91,7 +81,6 @@ public class PetHospitalController implements Initializable {
 				treatList();
 			}
 		});
->>>>>>> branch 'master' of https://github.com/ub7913/Project1.git
 		
 		btnPetList.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
