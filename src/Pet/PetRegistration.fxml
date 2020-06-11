@@ -21,9 +21,8 @@
       <Label layoutX="258.0" layoutY="279.0" text="전화번호" />
       <Separator layoutX="61.0" layoutY="222.0" prefHeight="3.0" prefWidth="355.0" />
       <TextField fx:id="txtName" layoutX="88.0" layoutY="44.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="132.0" />
-      <TextField fx:id="txtWeight" layoutX="354.0" layoutY="138.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="64.0" />
       <TextField fx:id="txtAge" layoutX="88.0" layoutY="88.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="132.0" />
-      <TextField fx:id="txtBreed" layoutX="312.0" layoutY="88.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="132.0" />
+      <DatePicker fx:id="dateBirth" layoutX="88.0" layoutY="138.0" prefHeight="23.0" prefWidth="132.0" />
       <ComboBox fx:id="comboGender" layoutX="147.0" layoutY="186.0" prefHeight="23.0" prefWidth="73.0" promptText="선택">
       	<items>
 			<FXCollections fx:factory="observableArrayList">
@@ -32,6 +31,8 @@
 			</FXCollections>     
       	</items>
       </ComboBox>
+      <TextField fx:id="txtBreed" layoutX="312.0" layoutY="88.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="132.0" />
+      <TextField fx:id="txtWeight" layoutX="354.0" layoutY="138.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="64.0" />
       <ComboBox fx:id="comboNuet" layoutX="373.0" layoutY="186.0" prefHeight="23.0" prefWidth="73.0" promptText="선택">
       	<items>
 			<FXCollections fx:factory="observableArrayList">
@@ -40,16 +41,15 @@
 			</FXCollections>     
       	</items>
       </ComboBox>
-      <TextField fx:id="txtPhone" layoutX="319.0" layoutY="275.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="132.0" />
       <TextField fx:id="txtHost" layoutX="88.0" layoutY="275.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="132.0" />
+      <TextField fx:id="txtPhone" layoutX="319.0" layoutY="275.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="132.0" />
       <Separator layoutX="236.0" layoutY="44.0" orientation="VERTICAL" prefHeight="172.0" prefWidth="5.0" />
-      <DatePicker fx:id="dateBirth" layoutX="88.0" layoutY="138.0" prefHeight="23.0" prefWidth="132.0" />
-      <Button fx:id="btnAdd" layoutX="140.0" layoutY="329.0" mnemonicParsing="false" text="등록" />
-      <Button fx:id="btnClose" layoutX="304.0" layoutY="329.0" mnemonicParsing="false" text="닫기" />
+      <Button fx:id="btnReg" layoutX="140.0" layoutY="329.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction"/>
+      <Button fx:id="btnPrev" layoutX="304.0" layoutY="329.0" mnemonicParsing="false" text="닫기" onAction="#handleBtnPrevAction"/>
       <Label layoutX="204.0" layoutY="238.0" text="보호자 정보" />
       <Label layoutX="210.0" layoutY="14.0" text="애견 정보" />
       <Label layoutX="427.0" layoutY="142.0" text="kg" />
       <Label layoutX="256.0" layoutY="48.0" text="사진" />
-      <Button fx:id="btnPhoto" layoutX="380.0" layoutY="44.0" mnemonicParsing="false" text="사진등록" />
+      <Button fx:id="btnImage" layoutX="380.0" layoutY="44.0" mnemonicParsing="false" text="사진등록" onAction="#handleBtnImageAction" /><!--   -->
    </children>
 </AnchorPane>
