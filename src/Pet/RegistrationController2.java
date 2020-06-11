@@ -30,7 +30,7 @@ public class RegistrationController2 implements Initializable {
 	@FXML TextField txtName, txtWeight, txtAge, txtBreed, txtPhone, txtHost;
 	@FXML ComboBox<String> comboGender, comboNuet;
 	@FXML DatePicker dateBirth;
-	@FXML Button btnReg, btnPrev, btnImage;
+	@FXML Button btnPrev, btnImage;
 	
 	Connection conn;
 	String path=null;//handleBtnImageAction메소드의 결과값을 담기위한
