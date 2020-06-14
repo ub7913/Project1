@@ -7,7 +7,11 @@ import java.util.ResourceBundle;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.ResourceBundle;
+
+
+import javafx.fxml.FXML;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,7 +19,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+
 import javafx.fxml.Initializable;
+
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -47,6 +55,25 @@ public class PetHospitalController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		Date date= new Date();
+		date.setTime(9);
+//		date.setHours(9);
+		Calendar cal = Calendar.getInstance();
+				cal.setTime(date);
+				
+		
+		
+		
+		
+		for(int i = 0;i<32;i++) {
+			for(int j = 0;j<32;j++) {
+				te.setText(cal.getTime().toString());
+				cal.add(cal.MINUTE, 20);
+				grid.add(te, i, j);
+			}
+		}
+				
 
 		btnTreatmentList.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
