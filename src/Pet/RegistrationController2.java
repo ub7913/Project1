@@ -1,7 +1,6 @@
 package Pet;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -12,7 +11,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -21,6 +19,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
@@ -30,7 +30,8 @@ public class RegistrationController2 implements Initializable {
 	@FXML TextField txtName, txtWeight, txtAge, txtBreed, txtPhone, txtHost;
 	@FXML ComboBox<String> comboGender, comboNuet;
 	@FXML DatePicker dateBirth;
-	@FXML Button btnPrev, btnImage;
+	@FXML Button btnReg, btnPrev, btnImage;
+	@FXML ImageView imgImage;
 	
 	Connection conn;
 	String path=null;//handleBtnImageAction메소드의 결과값을 담기위한
@@ -67,8 +68,8 @@ public class RegistrationController2 implements Initializable {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 		String sql = "INSERT INTO registration1(id,pet_name,"
 					+ "pet_age,pet_birthdate,pet_gender,pet_breed,"
-					+ "pet_weight,pet_nuet,host_name,host_phone,image) "
-					+ "VALUES(pet_id_seq.nextval,?,?,?,?,?,?,?,?,?,?)";
+					+ "pet_weight,pet_nuet,host_name,host_phone,image,cur_date) "
+					+ "VALUES(pet_id_seq.nextval,?,?,?,?,?,?,?,?,?,?,sysdate)";
 
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -83,6 +84,7 @@ public class RegistrationController2 implements Initializable {
 			pstmt.setString(9, txtPhone.getText());
 			pstmt.setString(10, path);
 			
+			
 			int r = pstmt.executeUpdate();
 			System.out.println(r+"건 입력됨");
 		} catch (SQLException e1) {
@@ -93,12 +95,13 @@ public class RegistrationController2 implements Initializable {
 		txtName.clear();
 		txtAge.clear();
 		dateBirth.setValue(null);
-		comboGender.getItems().clear();
+		comboGender.setValue(null);
 		txtBreed.clear();
 		txtWeight.clear();
-		comboNuet.getItems().clear();
+		comboNuet.setValue(null);
 		txtHost.clear();
 		txtPhone.clear();
+		imgImage.setImage(null);
 	}
 	
 	//이전레이아웃으로 돌아가도록 이전 버튼에 이벤트달기
@@ -124,6 +127,7 @@ public class RegistrationController2 implements Initializable {
 		File file = fileChooser.showOpenDialog(null);
 		path = file.getPath();
 		System.out.println(path);
+		imgImage.setImage(new Image("file:///"+path));
 	}
 	
 }
